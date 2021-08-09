@@ -28,8 +28,8 @@ public class PaymentsView extends VerticalLayout {
         radioGroup.setValue("Дифференцированный платеж");
         layout.addComponents(radioGroup);
         radioGroup.addValueChangeListener(event -> {
-            if(event.getValue() == "Дифференцированный платеж") grid.setItems(paymentsListDiff);
-            if(event.getValue() == "Аннуитетный платеж") grid.setItems(paymentsListAnn);
+            if(event.getValue().equals("Дифференцированный платеж")) grid.setItems(paymentsListDiff);
+            if(event.getValue().equals("Аннуитетный платеж")) grid.setItems(paymentsListAnn);
         });
         updateList();
         addComponents(layout, gridLayout);
